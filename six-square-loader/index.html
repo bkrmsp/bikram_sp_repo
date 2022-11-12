@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            body {
+                --va-progress-bar-color: #03a96f;
+            }
+
+            .ag-mt-15 {
+                margin-top: 15px !important;
+            }
+
+            .ag-prog-bar-wrapper {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .ag-prog-bar {
+                width: 30px;
+                height: 30px;
+                /* background: linear-gradient(90deg, #FFFFFF 0%, var(--va-progress-bar-color) 100%); */
+                background-color: var(--va-progress-bar-color);
+                background: linear-gradient();
+                animation-iteration-count: infinite;
+                animation-duration: 700ms;
+                opacity: 0;
+            }
+
+            .ag-prog-bar-wrapper div:nth-child(1) {
+                animation-name: anim-1;
+                animation-delay: 50ms;
+            }
+
+            .ag-prog-bar-wrapper div:nth-child(2) {
+                animation-name: anim-2;
+                animation-delay: 150ms;
+            }
+
+            .ag-prog-bar-wrapper div:nth-child(3) {
+                animation-name: anim-3;
+                animation-delay: 250ms;
+            }
+
+            .ag-prog-bar-wrapper div:nth-child(4) {
+                animation-name: anim-4;
+                animation-delay: 350ms;
+            }
+
+            .ag-prog-bar-wrapper div:nth-child(5) {
+                animation-name: anim-5;
+                animation-delay: 450ms;
+            }
+
+            .ag-prog-bar-wrapper div:nth-child(6) {
+                animation-name: anim-6;
+                animation-delay: 550ms;
+            }
+
+            @keyframes anim-1 {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 0.1;
+                }
+            }
+
+            @keyframes anim-2 {
+                from {
+                    opacity: 0.1;
+                }
+
+                to {
+                    opacity: 0.3;
+                }
+            }
+
+            @keyframes anim-3 {
+                from {
+                    opacity: 0.3;
+                }
+
+                to {
+                    opacity: 0.5;
+                }
+            }
+
+            @keyframes anim-4 {
+                from {
+                    opacity: 0.5;
+                }
+
+                to {
+                    opacity: 0.7;
+                }
+            }
+
+            @keyframes anim-5 {
+                from {
+                    opacity: 0.7;
+                }
+
+                to {
+                    opacity: 0.9;
+                }
+            }
+
+            @keyframes anim-6 {
+                from {
+                    opacity: 0.9;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="ag-mt-15" style="width: 300px;">
+            <div class="ag-prog-bar-wrapper">
+                <div class="ag-prog-bar">
+                </div>
+                <div class="ag-prog-bar">
+                </div>
+                <div class="ag-prog-bar">
+                </div>
+                <div class="ag-prog-bar">
+                </div>
+                <div class="ag-prog-bar">
+                </div>
+                <div class="ag-prog-bar">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
