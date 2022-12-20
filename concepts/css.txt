@@ -1,0 +1,23 @@
+BEM methodology
+
+CSS Variables
+
+display flex
+
+media queries
+
+box Module
+
+visibility vs display
+
+CSS animations
+
+CSS transitions
+
+position value comparisons
+
+
+##PRACTICAL:
+Center align content
+
+Create a Modal popup

@@ -1,0 +1,84 @@
+How JS executes code?
+Execution Context
+Call Stack
+
+
+Closures
+Scoping
+Hoisting
+let vs var vs const
+
+
+Event Queue
+Event Loop
+Callback
+Event Listner
+Multiple ways to add Event listener
+Event bubbling
+Event capturing
+Event Propagation
+
+
+Callback hell
+Promises
+async/await
+Asynchronous Programming
+Browser APIs
+
+Call vs Apply vs Bind
+this keyword
+Arrow Method
+
+Array methods (map, filter, reduce, forEach, find)
+split vs slice vs splice
+
+Prototype
+Inheritance
+extends
+
+Modular Programming
+Module System Types (CommonJS, AMD, UMD, ESModule)
+
+Functional Programming
+
+DOM
+DOM methods (getElementById, querySelector, append, appendChild, createElement)
+BOM
+CSSOM
+
+Design Patterns
+
+Object
+
+Memory Allocation
+
+For loop & Variants
+
+Best Practices
+
+Lazy Loading
+
+Async vs Defer
+
+How JS is parsed?
+
+How JS works
+
+Working of v8 engine?
+
+global Object
+
+Node vs Browser JS execution
+
+Different ways of writing methods
+
+strict mode
+
+JSON methods
+
+JSON rules
+
+Higher Order functions
+Pure functions
+Arrow functions
+IIFE

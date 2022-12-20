@@ -1,0 +1,32 @@
+Component
+Types of Component
+Function vs Class component
+Lifecycle phases
+
+Hooks
+    useState
+    useEffect
+    useDispatch
+    useSelector
+    useContext
+    useReducer
+
+JSX
+
+Virtual DOM
+Diffing
+
+How React is better than Other libraries?
+
+Redux
+    Architecture
+    Action, Reducer
+
+Redux Middleware
+    Thunk
+
+React Router
+    Browser
+    Hash
+    Memory
+    Router
