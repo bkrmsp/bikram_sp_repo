@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
+import OffsetContext from "../context/OffsetContext";
 import { AppBar, Box, Toolbar, Container, IconButton, Typography, Menu, MenuItem, Button } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import './assets/styles/Header.scss';
 
 const Header: React.FC = (props) => {   //<{ onNavClick(e: React.MouseEvent, sectionName: string): void }>
+    const offsetContext = useContext(OffsetContext);
     const classPrefix = 'mp';
     const pages = [
         'About', 'Achievements', 'Résumé', 'Contact'
@@ -39,14 +41,20 @@ const Header: React.FC = (props) => {   //<{ onNavClick(e: React.MouseEvent, sec
         //
         var headerOffset = document.getElementById('mp-header')?.offsetHeight;//45;
         var elementPosition = element.getBoundingClientRect().top;
-        var offsetPosition = elementPosition + window.pageYOffset - (headerOffset ?? 0);
+        var offsetPosition = elementPosition + window.pageYOffset - (headerOffset ? headerOffset : 0);
         //
         // element?.scrollIntoView(false, { 'behavior': 'smooth', 'block': 'center' });
         window.scrollTo({
-            top: offsetPosition,
+            top: offsetPosition - 16,
             behavior: "smooth"
         });
     }
+
+    useEffect(() => {
+        let headerOffset = document.getElementById('mp-header')?.offsetHeight;
+
+        offsetContext[1](headerOffset ? headerOffset : 0)
+    }, []);
     return (
         // <div className="mp-row mp-header-bar">
         //     <div className="mp-heading-section">
@@ -70,7 +78,7 @@ const Header: React.FC = (props) => {   //<{ onNavClick(e: React.MouseEvent, sec
         //     </div>
 
         // </div >
-        <AppBar id="mp-header" position="sticky" sx={{ padding: '1rem', color: 'var(--mp-content-color)' }}>
+        <AppBar id="mp-header" position="fixed" sx={{ padding: '1rem', color: 'var(--mp-content-color)' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Desktop */}
@@ -110,7 +118,7 @@ const Header: React.FC = (props) => {   //<{ onNavClick(e: React.MouseEvent, sec
                         >
                             {
                                 pages.map(x => (
-                                    <MenuItem key={x} onClick={handleCloseNavMenu}>
+                                    <MenuItem key={x} onClick={(e) => { handleCloseNavMenu(e); onNavClick(e, x) }}>
                                         <Typography textAlign="center">{x}</Typography>
                                     </MenuItem>
                                 ))

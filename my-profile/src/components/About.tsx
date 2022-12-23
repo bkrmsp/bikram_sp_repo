@@ -1,5 +1,7 @@
 import { Typography } from "@mui/material";
-import React, { ReactElement, useRef } from "react";
+import React, { ReactElement, useContext } from "react";
+
+// import OffsetContext from "../context/OffsetContext";
 import './assets/styles/About.scss';
 
 // interface Props {
@@ -11,6 +13,7 @@ import './assets/styles/About.scss';
 const About: React.FC = (props) => {  //React.ForwardRefExoticComponent<Props> = (props) => {
     // const ref = useRef<null | HTMLDivElement>(props.ref);
     // console.log(props.ref)
+    // const offsetContext = useContext(OffsetContext);
     const contentList: Array<string> = [
         'I.T. Professional with 9+ yrs of work experience.',
         'Experience with Startups to Corporate MNCs in both Product & Services.',
@@ -38,7 +41,7 @@ const About: React.FC = (props) => {  //React.ForwardRefExoticComponent<Props> =
 
     return (
         // ref={props.ref}
-        <div className="mp-row mp-about" >
+        <div className="mp-row mp-about">
             <div>
                 <div className="mp-row mp-about-content">
                     <div className="mp-about-description">
