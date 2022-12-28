@@ -81,7 +81,7 @@ module.exports = {
             new webpack.optimize.AggressiveMergingPlugin()
         ]
     },
-    devtool: process.env.NODE_ENV === 'development' ? false : 'source-map',  //eval for development
+    devtool: process.env.NODE_ENV === 'development' ? 'source-map' : 'source-map',  //eval for development
     stats: {
         errorDetails: true
     },
