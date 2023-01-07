@@ -1,7 +1,9 @@
 Component
-Types of Component
-Function vs Class component
 Lifecycle phases
+Function vs Class component
+Stateful vs Stateless component
+Controlled vs Uncontrolled Component
+Higher order component
 
 Hooks
     useState

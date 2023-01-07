@@ -1,0 +1,69 @@
+* Component
+Basic entity in React world.
+A function or class that returns HTML in the form of JSX.
+Has a Lifecycle.
+
+* JSX
+Javascript based XML syntax
+Used in React.
+
+* Component Lifecycle phases
+Mounting
+Update
+Unmounting
+
+** Mounting Phase
+When component is mounted on DOM i.e. rendered in browser.
+When this occurs, it can be detected in function component using useEffect hook with blank Array as second Parameter
+
+** Update Phase
+When component is re-rendered/Updated due to 
+change in Local State 
+Or change in Store State (if subscribed)
+Or due to re-render of Parent component that has passed props to child component
+
+When this occurs, it can be detected by using useEffect with dependency passed inside array as second Parameter
+
+** Unmounting Phase
+When component is unmounted from DOM i.e. removed from DOM
+When this occrus, it can be detected by returning a method from useEffect first parameter i.e. method with blank array as second Parameter
+
+
+* Example of Phases:
+
+** Mounting/Unmounting Phase:
+useEffect(() => {
+    //Anything that needs to be executed when Component Mounted
+    return () => {
+        //Anything that needs to be executed when Component Unmounts
+    }
+},[]);
+
+** Update Phase:
+useEffect(() => {
+    //Anything that needs to be executed when Component Updated
+},[props.name, age, gender]);
+
+//Here props.name is props changed (received from Parent component)
+//Here age is local State
+//Here gender is Store state created using useSelector
+
+* Virtual DOM & Diffing Algorithm
+Virtual DOM is in-memory representation of actual DOM.
+Component creation or updation occurs first in Virtual DOM.
+Every element is uniquely identified by a key which is maintained by React.
+This helps to identify what part is changed or need to be updated in Virtual DOM.
+The purpose of Virtual DOM is to avoid the un-necessary delay or work to re-render the Real DOM.
+
+Diffing Algorithm is used by React to compare the changes b/w Virtual and Real DOM.
+Only the different parts are updated in Real DOM and is made in sync with Virtual DOM.
+
+To sum up, React does a process called 
+Reconciliation = Render in Virtual DOM + Diffing + Commit (Sync in Real DOM)
+
+React DOM is responsible for updating the Real DOM w.r.t Virtual DOM
+
+When React sees that root element is different then it tears down old DOM and creates new DOM.
+This is very much faster than comparing each element.
+
+When React sees root element is same then it compares attributes and look for  differences and then changes.

@@ -1,0 +1,15 @@
+An Energetic IT Professional with 9+ yrs of experience in Software industry with focus on Front-End and functional domains - Banking, Insurance,
+Healthcare, Retail, Travel, Finance and Banking. 
+
+Have worked in both Service and Product based companies ranging from Start-ups to Corporate MNCs.
+
+I am a keen and fast paced learner with a focus on self improvement.
+I have an eye to detail, so i analyse requirements at both high level and low level in detail to identify feasibility concerns and work on providing quality with good user experience in the products i work. These are the reasons that i have been appreciated by my managers in terms of awards and verbal compliments.
+
+I also believe in team work hence try to remove blockers or difficulties that my peers faces. 
+
+I believe in mentoring and teaching as well, hence i have mentored 7 resources in last 2 yrs. Also, i publish articles time to time on Dev.to and Medium website.
+
+My short term goal is to officially lead a team of UI developers. I have been working on this by mentoring and nurturing freshers/junior resources and help them with their learning and tasks.
+
+My long term goal is to be a Front End / UI Architect. I have been already creating applications from scratch (configuring webpack, babel, setting up configurations etc) instead of boilerplate like CRA that also brings un-necessary packages.
