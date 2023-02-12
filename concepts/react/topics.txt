@@ -1,7 +1,7 @@
 Component
 Lifecycle phases
 Function vs Class component
-Stateful vs Stateless component
+Stateful/Container/Smart vs Stateless/Presentational/Dumb component
 Controlled vs Uncontrolled Component
 Higher order component
 

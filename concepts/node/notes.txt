@@ -1,0 +1,43 @@
+# What is Node JS?
+JS Framework/Runtime to run JS on Server instead of Client (Browser)
+
+# Uses
+1) To write utility scripts, build tools etc
+2) API Development/Web Development
+
+# Alternatives
+PHP, ASP.NET, Python, etc
+
+# Ways to use Node JS / Ways to run Node JS Code
+Using REPL
+A playground for learning
+Execute code as you write it
+
+Using files
+Used for Real Apps
+Predictable Sequence of Steps
+Code is retrievable next time as stored in File
+
+# REPL
+R - Read User Input
+E - Evalutate Input
+P - Print output
+L - Loop (Wait for new input)
+
+# Core Modules
+http - Start Server
+https - Start SSL Server
+fs - To work with File system (Read, write files)
+path - Helps in constructing paths to work with files in any OS
+os - To work with Operating system relevant info
+
+#Creating Node Server
+1) Import HTTP Module
+const http = require('http')
+
+2) Create Server
+const server = http.createServer(<Request Listener Method>, <Handle Response Method>)
+Returns a server object
+
+3) Start Server
+server.listen(<PORT>, <HOSTNAME>);

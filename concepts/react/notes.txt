@@ -67,3 +67,18 @@ When React sees that root element is different then it tears down old DOM and cr
 This is very much faster than comparing each element.
 
 When React sees root element is same then it compares attributes and look for  differences and then changes.
+
+
+# Controlled vs Uncontrolled
+
+Controlled Component
+BACKGROUND: HTML maintains the values of elements like input, select, textarea etc.
+However, in React, we can also control the value and their changes using state and setState methods.
+So, if we want a single source of truth, then we go with the latter option and this type of component is called Controlled.
+
+Uncontrolled Component
+In this case, we dont want to maintain the changes in values of HTML elements but would need to access them when required.
+So, by creating reference to them, we can refer to the element and access the value. However changes wil be controlled by HTML and not react.
+
+
+# Stateful/Container/Smart vs Stateless/Presentational/Dumb Component

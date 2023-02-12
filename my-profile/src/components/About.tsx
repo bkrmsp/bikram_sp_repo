@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
-import React, { ReactElement, useContext } from "react";
-
+import React, { ReactElement } from "react";
+import axios from 'axios';
 // import OffsetContext from "../context/OffsetContext";
 import './assets/styles/About.scss';
 

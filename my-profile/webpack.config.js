@@ -5,13 +5,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     mode: process.env.NODE_ENV,
-    entry: './src/index.tsx',
+    entry: {
+        'main': './src/index.tsx',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'MyProfile.js',
+        filename: '[name].bundle.js',   //'MyProfile.js',
         // publicPath: '/',
         assetModuleFilename: 'assets/images/[hash][ext][query]' //LOGIC: ALLOWS TO KEEP ASSETS IMPORTED IN src FOLDER TO BE OUTPUT UNDER SPECIFIC FOLDER
     },
@@ -63,7 +66,8 @@ module.exports = {
                     to: './assets'
                 }
             ]
-        })
+        }),
+        process.env.NODE_ENV === 'development' ? new BundleAnalyzerPlugin() : () => { },
     ],
     externals: {
         "react": "React",
@@ -79,7 +83,13 @@ module.exports = {
                 extractComments: false
             }),
             new webpack.optimize.AggressiveMergingPlugin()
-        ]
+        ],
+        splitChunks: {
+            cacheGroups: {
+                mui: { test: /[\\/]node_modules[\\/](@mui|@emotion)[\\/]/, name: 'mui', chunks: 'all' }, //  /[\\/]node_modules[\\/]([\\@]mui)[\\/]/
+                common: { test: /[\\/]node_modules[\\/](?!(@mui|@emotion))[\\/]/, name: 'common', chunks: 'all' }   ///[\\/]node_modules[\\/]/
+            }
+        }
     },
     devtool: process.env.NODE_ENV === 'development' ? 'source-map' : 'source-map',  //eval for development
     stats: {
