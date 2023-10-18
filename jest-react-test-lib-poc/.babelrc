@@ -1,0 +1,9 @@
+{
+    "presets": [
+        "@babel/preset-react",
+        "@babel/preset-env"
+    ],
+    "plugins": [
+      ["@babel/transform-runtime"]      //To solve Reference Error: regeneratorRuntime is not defined - Installed @babel/plugin-transform-runtime and added this plugins
+    ]                                   //https://stackoverflow.com/questions/53558916/babel-7-referenceerror-regeneratorruntime-is-not-defined
+}

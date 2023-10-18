@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+{
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            "Eat food",
+          ],
+          "props": {},
+          "type": "h1",
+        },
+      ],
+      "props": {},
+      "type": "strike",
+    },
+  ],
+  "props": {
+    "data-testid": "todo-1",
+  },
+  "type": "div",
+}
+`;
