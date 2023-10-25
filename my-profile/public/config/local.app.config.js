@@ -13,7 +13,9 @@ function getAppConfig() {
 
         PHONE_NUMBER: '8884551563',
         EMAIL_ADDRESS: 'bkrmsp@gmail.com',
-        CV_URL: '/assets/documents/Bikram Singh Patel_CV.pdf'
+        CV_URL: '/assets/documents/Bikram Singh Patel_CV.pdf',
+
+        EXPERIENCE_YEARS: '10+'
     }
 };
 

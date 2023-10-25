@@ -15,7 +15,7 @@ const About: React.FC = (props) => {  //React.ForwardRefExoticComponent<Props> =
     // console.log(props.ref)
     // const offsetContext = useContext(OffsetContext);
     const contentList: Array<string> = [
-        'I.T. Professional with 9+ yrs of work experience.',
+        `I.T.Professional with ${window.APP_CONFIG.EXPERIENCE_YEARS} yrs of work experience.`,
         'Experience with Startups to Corporate MNCs in both Product & Services.',
         'Worked with U.S., Australian and Indian client(s).',
         'Insurance, Healthcare, Retail, Travel, Finance & Banking Domain Experience.'
